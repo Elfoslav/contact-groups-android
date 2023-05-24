@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_main">
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.hromnik.contactgroups.views.MainFragment"
+        tools:layout="@layout/activity_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_Groups"
+            app:destination="@id/fragment_groups" />
+        <action
+            android:id="@+id/action_MainFragment_to_Contacts"
+            app:destination="@id/fragment_contacts" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_contacts"
+        android:name="com.hromnik.contactgroups.views.ContactsFragment"
+        tools:layout="@layout/activity_main">
+
+        <action
+            android:id="@+id/action_Contacts_to_Group"
+            app:destination="@id/fragment_group">
+            <argument
+                android:name="groupId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_groups"
+        android:name="com.hromnik.contactgroups.views.GroupsFragment"
+        tools:layout="@layout/activity_main">
+
+        <action
+            android:id="@+id/action_Groups_to_Group"
+            app:destination="@id/fragment_group">
+            <argument
+                android:name="groupId"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_group"
+        android:name="com.hromnik.contactgroups.views.GroupFragment"
+        tools:layout="@layout/activity_main">
+        <action
+            android:id="@+id/action_Group_to_Groups"
+            app:destination="@id/fragment_groups" />
+        <action
+            android:id="@+id/action_Group_to_Contacts"
+            app:destination="@id/fragment_contacts">
+            <argument
+                android:name="groupId"
+                app:argType="string" />
+            <argument
+                android:name="selectable"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+</navigation>

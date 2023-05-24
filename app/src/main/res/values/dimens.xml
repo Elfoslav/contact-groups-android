@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="layout_spacing">17dp</dimen>
+    <dimen name="button_height">70dp</dimen>
+    <dimen name="button_max_width">340dp</dimen>
+    <dimen name="first_item_margin_top">10dp</dimen>
+</resources>

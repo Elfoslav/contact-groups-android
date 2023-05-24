@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.GroupFragment"
+    android:id="@+id/fragment_group">
+
+    <TextView
+        android:id="@+id/group_text_no_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/group_no_contacts"
+        android:paddingTop="@dimen/layout_spacing"
+        android:paddingLeft="@dimen/layout_spacing" />
+    <TextView
+        android:id="@+id/group_text_add_contacts"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/group_add_contacts"
+        android:paddingLeft="@dimen/layout_spacing"
+        android:paddingTop="@dimen/layout_spacing" />
+
+
+    <include layout="@layout/fragment_contacts" />
+    <include layout="@layout/component_floating_button" android:id="@+id/add_contacts_to_group_button" />
+
+</FrameLayout>

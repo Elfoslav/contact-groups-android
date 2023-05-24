@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/layout_spacing"
+    android:paddingRight="@dimen/layout_spacing"
+    android:paddingBottom="@dimen/layout_spacing">
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="22dp" />
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/closeButton"
+        android:text="@string/add_selected_contacts_to_a_group"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:paddingTop="@dimen/layout_spacing"
+        android:paddingBottom="@dimen/layout_spacing"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/groupsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerTextView"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:elevation="1dp" />
+
+</RelativeLayout>

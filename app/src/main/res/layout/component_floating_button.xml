@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hromnik.contactgroups.components.FloatingActionButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/floating_button"
+    android:layout_width="@dimen/fab_size"
+    android:layout_height="@dimen/fab_size"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="@dimen/fab_margin"
+    android:elevation="99dp"
+    app:fabCustomSize="@dimen/fab_size" />
